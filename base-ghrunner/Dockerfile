@@ -11,6 +11,7 @@ RUN apt-get update \
     curl \
     libicu-dev \
     wget \
+    git \
     jq
     
 WORKDIR /base-runner
