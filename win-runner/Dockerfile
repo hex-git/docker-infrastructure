@@ -25,4 +25,4 @@ RUN Expand-Archive -Path actions-runner-win-x64-$env:RUNNER_VERSION.zip -Destina
 RUN Start-Process -Wait -NoNewWindow -FilePath ".\Git-$env:GIT_VERSION-64-bit.exe" -ArgumentList '/SP-', '/VERYSILENT', '/NORESTART', '/NOCANCEL', '/CLOSEAPPLICATIONS', '/RESTARTAPPLICATIONS', '/DIR=C:\git'
 RUN Start-Process -Wait -NoNewWindow -FilePath ".\Miniconda3-$env:MINICONDA_VERSION-Windows-x86_64.exe" -ArgumentList "/S", "/AddToPath=1", "/D=$env:CONDA"
 
-CMD $env:Path+=';C:\git\bin'; ./config.cmd --url https://github.com/hex-git/$env:REPO --token $env:GH_TOKEN; while($true) {./run.cmd; Start-Sleep -s 10}
+CMD $env:Path+=';C:\git\bin'; ./config.cmd --url https://github.com/hex-git/$env:REPO --token $env:GH_TOKEN; while($true); {./run.cmd; Start-Sleep -s 10}
