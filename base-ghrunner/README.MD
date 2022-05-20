@@ -9,4 +9,4 @@
 ### How to build and run image (examples use this repo)
 0) Get runner token from settings of your repo;
 1) _docker build /directory/where/dockerfile/stored/_
-2) _docker run -d --env REPO=docker-infrastructure -- env GH_TOKEN=token_from_step_0 $YOUR_IMAGE_ID_
+2) _docker run -d --env REPO=docker-infrastructure --env GH_TOKEN=token_from_step_0 $YOUR_IMAGE_ID_
