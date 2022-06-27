@@ -35,4 +35,7 @@ USER ghrunner
 RUN mkdir /base-runner/artifacts
 RUN $CONDA/bin/conda init
 
+COPY ../get_token.py .
+RUN chmod +x get_token.py
+
 ENTRYPOINT ["/base-runner/entrypoint.sh"]
