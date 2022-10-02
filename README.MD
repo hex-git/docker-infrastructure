@@ -11,6 +11,6 @@ Here stored 3 types of runners for 2 cpu-architectures:
 3) win-runner - runner for windows containers subsystem, I run it through Docker Desktop on Windows 10 with enabled options Hyper-V, WSL2, Windows containers. x86_64 only.
 It based on servercore:20H2 image, includes:
   - Miniconda py37_4.10.3
-  - GH Actions runner 2.291.1 (last at 19.05.2021)
+  - GH Actions runner
   - Git-for-Windows 2.34.1
   - Microsoft Visual C++ Redistributable 17 (with with some nuances)
