@@ -2,7 +2,7 @@
 Here stored 3 types of runners for 2 cpu-architectures:
 1) base-runner - based on ubuntu 20.04 image (available for aarch64 and x86_64), includes:
   - Miniconda py37_4.10.3 (for aarch64 - changed for miniforge, cause miniconda not ready for aarch64)
-  - GH Actions runner 2.291.1 (last at 19.05.2021)
+  - GH Actions runner
   - curl
   - wget
   - git
