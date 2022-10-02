@@ -1,6 +1,6 @@
 ### This image based on servercore:20H2 image, includes:
   - Miniconda py37_4.10.3
-  - GH Actions runner v2.297.0 (last at 02.10.2022)
+  - GH Actions runner
   - Git-for-Windows 2.34.1
   - Microsoft Visual C++ Redistributable 17 (with with some nuances)
 <br>
