@@ -1,7 +1,6 @@
 FROM arm64v8/ubuntu:20.04
 
 ENV RUNNER_VERSION=2.294.0
-ENV MINICONDA_VERSION="py37_4.12.0"
 
 ENV DEBIAN_FRONTEND="nointeractive"
 
@@ -13,14 +12,14 @@ RUN apt-get update \
     wget \
     git \
     jq
-    
+
 WORKDIR /base-runner
 
 RUN curl -o actions-runner-linux-arm64-$RUNNER_VERSION.tar.gz -L https://github.com/actions/runner/releases/download/v$RUNNER_VERSION/actions-runner-linux-arm64-$RUNNER_VERSION.tar.gz
-RUN curl -o Miniconda3-$MINICONDA_VERSION-Linux-aarch64.sh -L https://repo.anaconda.com/miniconda/Miniconda3-$MINICONDA_VERSION-Linux-aarch64.sh
+RUN curl -o Miniforge3-Linux-aarch64.sh -L https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
 
 RUN tar xzf actions-runner-linux-arm64-$RUNNER_VERSION.tar.gz
-RUN bash Miniconda3-$MINICONDA_VERSION-Linux-aarch64.sh -b -p ./miniconda3
+RUN bash Miniforge3-Linux-aarch64.sh -b -p ./miniconda3
 
 ENV CONDA="/base-runner/miniconda3"
 
@@ -35,7 +34,6 @@ USER ghrunner
 RUN mkdir /base-runner/artifacts
 RUN $CONDA/bin/conda init
 
-COPY ../get_token.py .
-RUN chmod +x get_token.py
+COPY ./get_token.py .
 
 ENTRYPOINT ["/base-runner/entrypoint.sh"]
