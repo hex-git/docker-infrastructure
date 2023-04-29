@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/servercore:20H2
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
 ENV RUNNER_VERSION=2.297.0
 ENV MINICONDA_VERSION="py37_4.10.3"
