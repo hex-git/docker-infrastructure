@@ -9,7 +9,7 @@ Here stored 3 types of runners for 2 cpu-architectures:
   - jq
 2) no-conda-runner - same as previous, but without Miniconda, and available only for x86_64
 3) win-runner - runner for windows containers subsystem, I run it through Docker Desktop on Windows 10 with enabled options Hyper-V, WSL2, Windows containers. x86_64 only.
-It based on servercore:20H2 image, includes:
+It based on servercore:ltsc2009 image, includes:
   - Miniconda py37_4.10.3
   - GH Actions runner
   - Git-for-Windows 2.34.1
