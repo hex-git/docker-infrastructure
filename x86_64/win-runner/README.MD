@@ -1,4 +1,4 @@
-### This image based on servercore:20H2 image, includes:
+### This image based on servercore:ltsc2019 image, includes:
   - Miniconda py37_4.10.3
   - GH Actions runner
   - Git-for-Windows 2.34.1
